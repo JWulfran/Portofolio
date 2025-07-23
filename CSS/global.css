@@ -18,6 +18,11 @@ a{
     text-decoration: none;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 .list-unstyled{
     list-style: none;
     margin: 0;
@@ -26,10 +31,24 @@ a{
 
 .container{
     padding: 1rem 2rem;
+}
+
+.d-flex{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.grid__item{
+    width: 100%;
+}
+
 
 @media screen and (min-width:750px) {
     .container {
@@ -58,16 +77,27 @@ a{
 .header li{
     display: inline-flex;
     align-items: center;
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
 }
 
 .header a{
     color: #333;
 }
+.header a:hover {
+    color: red;
+}
 
 .header .right {
     display: flex;
     align-items: center;
+}
+ 
+.social{
+    display: flex;
+}
+
+.social li {
+    padding: 0 5px;
 }
 
 .social .icon{
@@ -81,6 +111,7 @@ a{
     height: 35px;
     cursor: pointer;
     position: relative;
+    margin-left: 1rem;
 }
 
 .bugger .bar{
@@ -90,9 +121,9 @@ a{
     background: #333;
 }
 
-.burger .bar::before,.burger .bar::after{
+.bugger .bar::before,.bugger .bar::after{
     display: block;
-    content:"";
+    content:""; 
     width: 22px;
     height: 3px;
     background:#333;
@@ -100,10 +131,14 @@ a{
 }
 
 .bugger .bar::before{
-    top:0
+    transform:  translateY(-8px);
 }
 .bugger .bar::after{
-    bottom: 0;
+    transform: translateY(8px);
+}
+
+@media screen and (max-width:749px) {
+    
 }
 
 @media screen and (min-width:750px) {
@@ -112,5 +147,23 @@ a{
     }
     .bugger{
         display: none;
+    }
+}
+
+.hero{
+    background: #5b6c78;
+    color: #fff;
+}
+.hero__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (min-width:749px) {
+    .hero__item {
+            flex: 1 0 50%;
     }
 }
