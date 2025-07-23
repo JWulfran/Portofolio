@@ -153,17 +153,45 @@ img{
 .hero{
     background: #5b6c78;
     color: #fff;
+    padding: 1rem 0 0 0;
 }
+
+.hero h1{
+    font-size: 4rem;
+    margin: 1.6rem 0 0 0;
+}
+
 .hero__item{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width:749px) {   /* Écran de téléphone */
+    .hero__item.left{
+        order: 2;
+    }
+    .hero__item.right{
+        order: 1;
+        padding: 5rem;
+    }
 }
 
 
-@media screen and (min-width:749px) {
+@media screen and (min-width:750px) {   /* Écran d'ordinateur */
     .hero__item {
-            flex: 1 0 50%;
+        flex: 1 0 50%;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .hero h1 {
+        font-size: 5rem;
+    }
+    .hero__avatar img {
+        max-width: 400px;
+        border-radius: 50%;
+
     }
 }
