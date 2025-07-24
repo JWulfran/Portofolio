@@ -14,6 +14,27 @@ body{
     margin: 0;
 }
 
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    color: #000;
+}
+
+h1,
+.h1{
+    font-size: 3.1rem;
+}
+
+h2,
+.h2 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+h3,
+.h3 {
+    font-size: 1.9rem;
+}
+
 a{
     text-decoration: none;
 }
@@ -43,6 +64,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .grid__item{
@@ -59,6 +81,17 @@ img{
 }
 
 /* Sections */
+
+section{
+    padding: 5.5rem 0;
+}
+
+@media screen and (max-width:749px) {   /* Écran de téléphone */
+    .section_header {
+        text-align: center;
+    }
+}
+
 .header{
     background: #fff;
     border-bottom: 1px solid #eee;
@@ -137,11 +170,11 @@ img{
     transform: translateY(8px);
 }
 
-@media screen and (max-width:749px) {
+@media screen and (max-width:749px) {   /* Écran de téléphone */
     
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:750px) {   /* Écran d'ordinateur */
     .navbar{
         display: flex;
     }
@@ -157,6 +190,7 @@ img{
 }
 
 .hero h1{
+    color: inherit;
     font-size: 4rem;
     margin: 1.6rem 0 0 0;
 }
@@ -192,6 +226,49 @@ img{
     .hero__avatar img {
         max-width: 400px;
         border-radius: 50%;
-
     }
+    .hero__item.right{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+}
+
+.About .title{
+    text-transform: uppercase;
+}
+
+.About__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width:749px) { /* Écran de téléphone */
+    .About__item {
+        align-items: flex-start;
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width:750px) {   /* Écran d'ordinateur */
+    .About__item {
+        flex: 1 0 50%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .About__item.left{
+        align-items: center;
+        padding: 7rem;
+    }
+
+    .About__item.right {
+        display: flex;
+        justify-content: center;
+    }
+   
 }
