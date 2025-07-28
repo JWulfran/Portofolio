@@ -46,6 +46,10 @@ img{
     height: auto;
 }
 
+li{
+    margin-bottom: 1rem;
+}
+
 .list-unstyled{
     list-style: none;
     margin: 0;
@@ -340,6 +344,102 @@ section{
     }
 
     
+}
+
+.Skills h4, .Skills p{
+    margin: 0 0 .3rem;
+}
+
+.Skills li {
+    background-color: #f5f5f5;
+    border-left: 3px solid rgb(91, 107, 120) ;
+    padding: .9rem 2rem;
+
+}
+
+.Skills .progressBar{
+    background: #f5f5f5;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.Skills .bar{
+    background: #5b6c78;
+    padding: 1rem;
+}
+
+@media screen and (max-width:749px) {   /* Écran de téléphone */
+
+}
+
+
+@media screen and (min-width:750px) {   /* Écran d'ordinateur */
+    .Skills__grid{
+        display: flex;
+    }
+
+    .Skills__item{
+        display: block;
+    }
+
+    .Skills__item.left {
+        width: 50%;
+        border-right: #fff solid 20px;
+    }
+    .Skills__item.right{
+        width: 50%;
+    }
+}
+
+.Portofolio {
+    background: #f5f5f5;
+    display: flex;
+}
+
+.Portofolio .grid__item {
+    max-width: 50%;
+    margin-bottom: 0;
+}
+
+.Portofolio-filter .grid__item{
+    max-width: 50%;
+    margin-bottom: 0;
+}
+
+.Portofolio-filter a{
+    color: #333;
+    background: #eee;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.Portofolio-filter a.active {
+    color: #fff;
+    background: #5b6c78;
+}
+.card{
+    background: #fff;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:749px) {
+    /* Écran de téléphone */
+    .Portofolio-filter a {
+       font-size: 1.4rem;
+    }
+}
+
+
+@media screen and (min-width:750px) {
+    /* Écran d'ordinateur */
+    .Portofolio-filter .grid__item {
+        max-width: 25%;
+    }
+    .Portofolio .grid__item{
+        max-width: 33.33%;
+    }
 }
 
 .toto {
