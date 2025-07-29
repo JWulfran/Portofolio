@@ -7,6 +7,7 @@
 html{
     font-size: 62.5%;
 }
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.6rem;
@@ -92,7 +93,7 @@ li{
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
-        }
+    }
 }
 
 /* Sections */
@@ -219,6 +220,15 @@ section{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.hero__item.left {
+    animation-duration: 1s;
+    animation-name: SlideInLeft;
+}
+.hero__item.right {
+    animation-duration: 1s;
+    animation-name: SlideInRight;
 }
 
 @media screen and (max-width:749px) {   /* Écran de téléphone */
@@ -546,6 +556,7 @@ footer .social a{
     height: 42px;
     display: flex;
     justify-content: center;
+    transition: all 0.4s;
 }
 
 footer .social a:hover {
@@ -564,5 +575,29 @@ footer .social a:hover {
     }
     footer .grid__item{
         max-width: 33.33%;
+    }
+    footer .grid__item.left {
+        text-align: center;
+    }
+}
+
+/*Animation CSS*/
+
+@keyframes SlideInLeft {
+    from{
+        transform: translateX(-110%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes SlideInRight {
+    from {
+        transform: translateX(110%);
+    }
+
+    to {
+        transform: translateX(0);
     }
 }
