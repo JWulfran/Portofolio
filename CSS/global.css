@@ -486,6 +486,34 @@ section{
     }
 }
 
+.form {
+    max-width: 800px;
+    margin: 4rem auto 0 auto;
+}
+
+.form input, .form textarea{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom:  2rem;
+}
+
+.form textarea{
+    min-height: 200px;
+}
+
+@media screen and (max-width:749px) {
+    /* Écran de téléphone */
+
+}
+
+
+@media screen and (min-width:750px) {
+    /* Écran d'ordinateur */
+
+
+}
+
 .toto {
     
 }
