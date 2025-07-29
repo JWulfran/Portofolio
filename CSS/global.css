@@ -435,6 +435,8 @@ section{
     background: #fff;
     text-transform: uppercase;
     position: relative;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    border: 1px solid #eee;
 }
 
 .card__inner {
@@ -502,20 +504,53 @@ section{
     min-height: 200px;
 }
 
-@media screen and (max-width:749px) {
-    /* Écran de téléphone */
-
+.form .btn{
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
-
-@media screen and (min-width:750px) {
-    /* Écran d'ordinateur */
-
-
+.form .btn:hover{
+    cursor: pointer;
+    background: #000;
 }
 
-.toto {
-    
+footer {
+    background: #000;
+    color: #eee;
+    text-align: center;
+    font-size: 1.4rem;
+}
+footer .grid{
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+}
+
+footer .social {
+    text-align: center;
+    justify-content: center;
+}
+
+footer .social li{
+    padding: 0 0.7rem;
+}
+
+footer .social a{
+    padding: 1rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .social a:hover {
+    background: #333;
+    border-radius: 50%;
 }
 
 @media screen and (max-width:749px) {    /* Écran de téléphone */
@@ -524,6 +559,10 @@ section{
 
 
 @media screen and (min-width:750px) {    /* Écran d'ordinateur */
-    
-
+    footer{
+        text-align: left;
+    }
+    footer .grid__item{
+        max-width: 33.33%;
+    }
 }
