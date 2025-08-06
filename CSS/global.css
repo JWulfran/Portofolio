@@ -207,19 +207,16 @@ section{
         overflow: hidden;
         transition: all .4s ease-out;
     }
-
     nav .menu li{
         display: flex;
         justify-content: center;
     }
-
     nav .menu a{
         display: flex;
         font-size: 2rem;
         padding: 2rem;
         transition: all .4s;
     }
-
     .show-nav nav{
         opacity: 1;
         width: 100%;
@@ -474,6 +471,10 @@ section{
     margin-bottom: 0;
 }
 
+.Portofolio .grid__item.hide{
+    display: none;
+}
+
 .Portofolio-filter .grid__item{
     max-width: 50%;
     margin-bottom: 0;
@@ -521,6 +522,9 @@ section{
     width: 100%;
     height: 100%;
     display: none;   /* Masque le Overlay*/
+}
+.card:hover .card__overlay {
+    display: block;  /* Affiche le Overlay au survol */
 }
 
 .card__overlay a {
