@@ -217,6 +217,7 @@ section{
         display: flex;
         font-size: 2rem;
         padding: 2rem;
+        transition: all .4s;
     }
 
     .show-nav nav{
@@ -224,6 +225,23 @@ section{
         width: 100%;
         left: 0;
         z-index: 2;
+    }
+    .show-nav nav li a:hover{
+        transform: scale(1.1);
+        text-decoration: none;
+    }
+    .show-nav .bugger .bar{
+        width: 0;
+    }
+    .bugger .bar::before,
+    .bugger .bar::after {
+        transition: all .2s ease-out;
+    }   
+    .show-nav .bugger .bar::before{
+        transform: rotate(-45deg);
+    }
+    .show-nav .bugger .bar::after {
+        transform: rotate(45deg);
     }
 }
 
