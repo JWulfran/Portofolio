@@ -90,33 +90,34 @@
                 </div>
                  <div class="hero__item right">
                     <div class="hero__avatar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="400" height="370" fill="#ffffff" stroke="black"
-                            stroke-width="6">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="400" height="370" fill="#5b6c78" stroke="#ffffff"
+                            stroke-width="10">
                             <!-- Écran principal -->
                             <rect x="100" y="80" width="400" height="250" rx="20" ry="20" />
                         
                             <!-- Graphique en barres (gauche) -->
-                            <rect x="130" y="260" width="15" height="40" fill="black" stroke="none" />
-                            <rect x="150" y="240" width="15" height="60" fill="black" stroke="none" />
-                            <rect x="170" y="220" width="15" height="80" fill="black" stroke="none" />
-                            <rect x="190" y="250" width="15" height="50" fill="black" stroke="none" />
+                            <rect x="130" y="260" width="15" height="40" fill="#ffffff" stroke="none" />
+                            <rect x="150" y="240" width="15" height="60" fill="#ffffff" stroke="none" />
+                            <rect x="170" y="220" width="15" height="80" fill="#ffffff" stroke="none" />
+                            <rect x="190" y="250" width="15" height="50" fill="#ffffff" stroke="none" />
                         
                             <!-- Ligne de tendance (centre) -->
-                            <polyline points="240,270 260,230 280,240 300,200 320,210 340,190" fill="none" stroke="black" stroke-width="5" />
+                            <polyline points="240,270 260,230 280,240 300,200 320,210 340,190" fill="none" stroke="#ffffff" stroke-width="5" />
                         
                             <!-- Graphique en barres supplémentaires (droite) -->
-                            <rect x="370" y="260" width="10" height="40" fill="black" stroke="none" />
-                            <rect x="385" y="240" width="10" height="60" fill="black" stroke="none" />
-                            <rect x="400" y="220" width="10" height="80" fill="black" stroke="none" />
-                            <rect x="415" y="200" width="10" height="100" fill="black" stroke="none" />
+                            <rect x="370" y="260" width="10" height="40" fill="#ffffff" stroke="none" />
+                            <rect x="385" y="240" width="10" height="60" fill="#ffffff" stroke="none" />
+                            <rect x="400" y="220" width="10" height="80" fill="#ffffff" stroke="none" />
+                            <rect x="415" y="200" width="10" height="100" fill="#ffffff" stroke="none" />
                         
                             <!-- Camembert (haut droite) -->
+                            <circle cx="275" cy="140" r="40" />
+                            <path d="M275 140 L250 110 A40 30 0 0 0 275 110 Z" fill="#ffffff" stroke="none" />
+                            <!-- Camembert (haut droite) -->
                             <circle cx="450" cy="140" r="30" />
-                            <path d="M450 140 L480 140 A30 30 0 0 0 450 110 Z" fill="black" stroke="none" />
+                            <path d="M450 140 L480 140 A30 30 0 0 0 450 110 Z" fill="#ffffff" stroke="none" />
                         
-                            <!-- Loupe (centrée dessous) -->
-                            <circle cx="300" cy="400" r="30" />
-                            <line x1="320" y1="420" x2="350" y2="450" stroke-linecap="round" />
+                            
                         </svg>
 
                     </div>
@@ -391,22 +392,22 @@
                     <a href="#" class="active" data-filter="all">Tous les projets</a>
                 </li>
                 <li class="grid__item">
-                    <a href="#" data-filter="web">Développement web</a>
+                    <a href="#" data-filter="Project_Portofolio">Project Portofolio</a>
                 </li>
                 <li class="grid__item">
-                    <a href="#" data-filter="design">Refonte graphique</a>
+                    <a href="#" data-filter="web">Développement Web</a>
                 </li>
                 <li class="grid__item">
-                    <a href="#" data-filter="app">Application</a>
+                    <a href="#" data-filter="app">Programmation</a>
                 </li>
             </ul>
             <div class="grid">
                 <div class="grid__item">
-                    <div class="card" data-category="web">
-                        <img src="https://picsum.photos/400/250?random=1" width="400" height="250" loading="lazy" alt="Project 1">
+                    <div class="card" data-category="Project_Portofolio">
+                        <img src="./img/WorkFlexSurvey_img_card.png" width="400" height="250" loading="lazy" alt="Project 1">
                         <div class="card__inner">
-                            <h3 class="card__title">Titre projet</h3>
-                            <p class="category">Développement Web</p>
+                            <h3 class="card__title">Analyse RH</h3>
+                            <p class="category">Project Portofolio</p>
                         </div>
                         <div class="card__overlay">
                             <a href="#" class="card__link" data-id="modal-1">+</a>
@@ -418,13 +419,13 @@
                             <div class="container">
                                 <div class="grid">
                                     <div class="grid__item">
-                                        <img src="https://picsum.photos/600/400?random=1" loading="lazy" width="560" height="373"
-                                            class="card__image" alt="Projet site de la ville de lyon" />
-                                        <img src="https://picsum.photos/600/400?random=11" loading="lazy" width="560" height="373"
-                                            class="card__image" alt="Projet site de la ville de lyon" />
+                                        <img src="./img/WorkFlexSurvey_img_modal_1.png" loading="lazy" width="560" height="373"
+                                            class="card__image" alt="Graphique sur la flexibilité au travail" />
+                                        <img src="./img/WorkFlexSurvey_img_modal_2.png" loading="lazy" width="560" height="373"
+                                            class="card__image" alt="Analyse RH du projet WorkFlexSurvey" />
                                     </div>
                                     <div class="grid__item">
-                                        <h4 class="modal__title h2">Titre de la modal 1</h4>
+                                        <h4 class="modal__title h2">Préférence pour le travail flexible</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
                                                 data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14" role="img"
@@ -433,56 +434,55 @@
                                                     d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z">
                                                 </path>
                                             </svg>
-                                            <i>Année : 2019</i>
+                                            <i>Année : 2025</i>
                                         </p>
                                         <p class="category">
-                                            <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tag"
-                                                class="svg-inline--fa fa-tag fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 512 512">
+                                            <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="tag" class="svg-inline--fa fa-tag fa-w-16" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z">
                                                 </path>
                                             </svg>
-                                            Refonte graphique
+                                            Analyse RH · Machine Learning
                                         </p>
+                    
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Quaerat accusantium laborum aliquam enim. Vero
-                                            voluptate, animi, sint vel mollitia ut odio, eius quis
-                                            expedita quo at! Dignissimos ipsum odit dolores!
+                                            Ce projet explore les préférences des employés pour le travail flexible à partir d’un jeu de
+                                            données de 9 000 individus. En s’appuyant sur des algorithmes de classification (KNN, arbres de
+                                            décision, réseaux de neurones), il identifie les facteurs clés comme le temps de déplacement, le
+                                            burnout ou la satisfaction au travail.
                                         </p>
-                        
+                    
                                         <h5 class="h3">Informations</h5>
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Quaerat accusantium laborum aliquam enim. Vero
-                                            voluptate, animi, sint vel mollitia ut odio, eius quis
-                                            expedita quo at! Dignissimos ipsum odit dolores!
+                                            Le modèle C5.0 a offert les meilleurs résultats. Cette analyse permet aux décideurs RH d’adapter
+                                            leurs politiques internes, en ciblant les profils les plus enclins à opter pour des modalités
+                                            flexibles.
                                         </p>
-                        
+                    
                                         <h5 class="h3">Technologies</h5>
-                        
                                         <ul>
-                                            <li>HTML, CSS</li>
-                                            <li>Javascript</li>
-                                            <li>React</li>
-                                            <li>Node.js</li>
-                                            <li>Express.js</li>
-                                            <li>MongoDB</li>
+                                            <li>Python (Pandas, Scikit-learn, Keras)</li>
+                                            <li>Visualisation : Matplotlib, Seaborn</li>
+                                            <li>Jupyter Notebook</li>
                                         </ul>
-                                        <p><a href="./Portofolio/Project-1.html">Voir le projet</a></p>
+                                        <p>
+                                            <a href="./Portofolio/WorkFlexSurvey.html" target="_blank">Voir le projet</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="grid__item">
                     <div class="card" data-category="design">
-                        <img src="https://picsum.photos/400/250?random=2" width="400" height="250" loading="lazy" alt="Project 2">
+                        <img src="./img/Clients_segmentation_img_card.png" width="400" height="250" loading="lazy" alt="Project 2">
                         <div class="card__inner">
-                            <h3 class="card__title">Titre projet</h3>
-                            <p class="category">Refonte graphique</p>
+                            <h3 class="card__title">Marketing</h3>
+                            <p class="category">Project Portofolio</p>
                         </div>
                         <div class="card__overlay">
                             <a href="#" class="card__link" data-id="modal-2">+</a>
@@ -494,13 +494,13 @@
                             <div class="container">
                                 <div class="grid">
                                     <div class="grid__item">
-                                        <img src="https://picsum.photos/600/400?random=2" loading="lazy" width="560" height="373"
-                                            class="card__image" alt="Projet site de la ville de lyon" />
-                                        <img src="https://picsum.photos/600/400?random=22" loading="lazy" width="560" height="373"
-                                            class="card__image" alt="Projet site de la ville de lyon" />
+                                        <img src="./img/Clients_segmenattion_img_modal_1.png" loading="lazy" width="560" height="373"
+                                            class="card__image" alt="Graphique segmentation clients" />
+                                        <img src="./img/Clients_segmenattion_img_modal_2.png" loading="lazy" width="560" height="373"
+                                            class="card__image" alt="Résultat classification clients" />
                                     </div>
                                     <div class="grid__item">
-                                        <h4 class="modal__title h2">Titre de la modal 1</h4>
+                                        <h4 class="modal__title h2">Ciblage des clients à forte valeur</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
                                                 data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14" role="img"
@@ -509,49 +509,45 @@
                                                     d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z">
                                                 </path>
                                             </svg>
-                                            <i>Année : 2019</i>
+                                            <i>Année : 2025</i>
                                         </p>
                                         <p class="category">
-                                            <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tag"
-                                                class="svg-inline--fa fa-tag fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 512 512">
+                                            <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="tag" class="svg-inline--fa fa-tag fa-w-16" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z">
                                                 </path>
                                             </svg>
-                                            Refonte graphique
+                                            Marketing prédictif · Classification
                                         </p>
+                    
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Quaerat accusantium laborum aliquam enim. Vero
-                                            voluptate, animi, sint vel mollitia ut odio, eius quis
-                                            expedita quo at! Dignissimos ipsum odit dolores!
+                                            Ce projet vise à identifier les clients à fort potentiel d’achat à l’aide de techniques de
+                                            classification. En transformant le panier moyen en variable cible binaire, nous avons construit
+                                            plusieurs modèles pour améliorer la performance marketing.
                                         </p>
-                        
+                    
                                         <h5 class="h3">Informations</h5>
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Quaerat accusantium laborum aliquam enim. Vero
-                                            voluptate, animi, sint vel mollitia ut odio, eius quis
-                                            expedita quo at! Dignissimos ipsum odit dolores!
+                                            Le modèle de réseau de neurones a montré les meilleurs résultats en prédiction. Cela permet à
+                                            l’entreprise de mieux allouer son budget publicitaire et de personnaliser ses actions.
                                         </p>
-                        
+                    
                                         <h5 class="h3">Technologies</h5>
-                        
                                         <ul>
-                                            <li>HTML, CSS</li>
-                                            <li>Javascript</li>
-                                            <li>React</li>
-                                            <li>Node.js</li>
-                                            <li>Express.js</li>
-                                            <li>MongoDB</li>
+                                            <li>Python, Scikit-learn, Keras</li>
+                                            <li>Matplotlib, Seaborn</li>
+                                            <li>Jupyter Notebook</li>
                                         </ul>
-                                        <p><a href="./Portofolio/Project-1.html">Voir le projet</a></p>
+                    
+                                        <p><a href="./Portofolio/Clients_segmenatation.html" target="_blank">Voir le projet</a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="grid__item">
                     <div class="card" data-category="app">
