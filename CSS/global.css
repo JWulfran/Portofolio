@@ -300,7 +300,7 @@ section{
     .hero h1 {
         font-size: 5rem;
     }
-    .hero__avatar img {
+    .hero__avatar svg {
         max-width: 400px;
         border-radius: 50%;
     }
