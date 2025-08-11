@@ -1,12 +1,21 @@
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remerciement</title>
-</head>
-<body>
+    <title>Portfolio | Jean Martial Gahoussou – Business Analyst</title>
+    <meta name="description"
+        content="Découvrez le profil professionnel de Jean Martial Gahoussou, Business Analyst spécialisé en BI, analyse de données et solutions d'affaires.">
 
+    <link rel="icon" href="../img/icon.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/blog&article.css">
+    <script src="../JS/global.js" defer></script>
+</head>
+
+<body>
+    <!-- Commentaire -->
     <header class="header">
         <div class="container d-flex">
             <div class="logo">
@@ -49,9 +58,103 @@
         </div>
     </header>
 
-    <h1>Merci pour votre message</h1>
-    <p>Nous vous recontacterons bientôt</p>
-    <a href="https://jwulfran.github.io/Portofolio/index.html">Retour</a>
+    <div class="container">
+        <div class="content-grid">
+    
+    
+            <main class="article">
+                
+                <article>
+                    <div class="section-header">
+                        <h1 class="article__title">Calculatrice DIY (HTML/CSS/JS)</h1>
+                        <p class="article__meta">Publié le 11 août 2025</p>
+                    </div>
+                
+                    <video src="../img/Calculatrice_DIV_video.mp4" autoplay loop muted width="900" height="500"></video>
+                
+                    <div class="content">
+                        <h2>Contexte</h2>
+                        <p>
+                            Ce mini‑projet met en pratique les fondamentaux du développement front‑end : structure sémantique,
+                            styles modulaires et logique JavaScript côté client. L’objectif est de produire une calculatrice web
+                            fiable, accessible et facile à maintenir.
+                        </p>
+                
+                        <h2>Objectifs</h2>
+                        <ul>
+                            <li>Implémenter les opérations arithmétiques de base avec une pile d’états simple et sûre.</li>
+                            <li>Gérer les entrées via clics et clavier (touches numériques, opérateurs, Entrée, Échap, Retour).</li>
+                            <li>Assurer la robustesse (gestion des erreurs, remise à zéro) et l’accessibilité (focus, aria).</li>
+                            <li>Respecter la séparation des responsabilités : HTML / CSS / JavaScript.</li>
+                        </ul>
+                
+                        <h2>Fonctionnalités</h2>
+                        <ul>
+                            <li>Écran d’affichage temps réel (buffer courant + résultat).</li>
+                            <li>Boutons : 0–9, ., +, −, ×, ÷, =, C (Clear), ← (Backspace).</li>
+                            <li>Raccourcis clavier : chiffres, point, opérateurs, Entrée (=), Échap (C), Backspace (←).</li>
+                            <li>Prévention des saisies invalides (double point, divisions par zéro, etc.).</li>
+                        </ul>
+                
+                        <h2>Architecture & logique</h2>
+                        <ul>
+                            <li><strong>HTML :</strong> balises sémantiques, roles ARIA sur les contrôles, libellés accessibles.</li>
+                            <li><strong>CSS :</strong> grille responsive, états :hover/:focus, contraste suffisant.</li>
+                            <li><strong>JavaScript :</strong> gestion d’état (<em>runningTotal</em>, <em>buffer</em>,
+                                <em>previousOperator</em>),
+                                fonctions dédiées (<code>handleNumber</code>, <code>handleSymbol</code>, <code>handleMath</code>), et
+                                prévention d’erreurs.</li>
+                        </ul>
+                
+                        <h2>Tests manuels</h2>
+                        <ul>
+                            <li>Chaînes d’opérations (ex. 12 + 7 × 3 − 5 ÷ 2 =).</li>
+                            <li>Annulation et correction : Backspace, Clear.</li>
+                            <li>Cas limites : 0 ÷ 0, double point décimal, dépassement d’affichage.</li>
+                        </ul>
+                
+                        <h2>Améliorations possibles</h2>
+                        <ul>
+                            <li>Historique des opérations + mémoires (M+, M−, MR, MC).</li>
+                            <li>Mode scientifique (puissances, racines, pourcentage, parenthèses).</li>
+                            <li>Thèmes clair/sombre, son/vibration optionnels.</li>
+                            <li>Tests unitaires (Jest) et CI légère (GitHub Actions).</li>
+                        </ul>
+                
+                        <h2>Technologies utilisées</h2>
+                        <ul>
+                            <li><strong>HTML, CSS, JavaScript</strong> (vanilla)</li>
+                        </ul>
+                
+                        <h2>Ressource</h2>
+                        <ul>
+                            <li><a href="https://github.com/JWulfran/Calculatrice-DIY" target="_blank" rel="noopener">Dépôt GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                
+            </main>
+    
+            <aside class="sidebar">
+    
+                <h2 class="h3">Articles récents</h2>
+                <ul>
+                    <li><a href="./article-5">Article 5</a></li>
+                    <li><a href="./article-4">Article 4</a></li>
+                    <li><a href="./article-3">Article 3</a></li>
+                    <li><a href="./article-2">Article 2</a></li>
+                </ul>
+                <h2 class="h3">Projets récents</h2>
+                <ul>
+                    <li><a href="./projet-5">Projet 5</a></li>
+                    <li><a href="./Housing_Prediction.html">Prédiction des prix des maisons</a></li>
+                    <li><a href="./Clients_segmenatation.html">Marketing prédictif · Classification</a></li>
+                    <li><a href="./WorkFlexSurvey.html">Analyse RH · Machine Learning</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -79,7 +182,7 @@
                                 </svg>
                             </a>
                         </li>
-    
+
                     </ul>
                 </div>
                 <div class="grid__item">
@@ -88,6 +191,9 @@
             </div>
         </div>
     </footer>
-    
+
+
+
 </body>
+
 </html>

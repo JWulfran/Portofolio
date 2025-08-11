@@ -1,12 +1,21 @@
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remerciement</title>
-</head>
-<body>
+    <title>Portfolio | Jean Martial Gahoussou – Business Analyst</title>
+    <meta name="description"
+        content="Découvrez le profil professionnel de Jean Martial Gahoussou, Business Analyst spécialisé en BI, analyse de données et solutions d'affaires.">
 
+    <link rel="icon" href="../img/icon.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/blog&article.css">
+    <script src="../JS/global.js" defer></script>
+</head>
+
+<body>
+    <!-- Commentaire -->
     <header class="header">
         <div class="container d-flex">
             <div class="logo">
@@ -49,9 +58,120 @@
         </div>
     </header>
 
-    <h1>Merci pour votre message</h1>
-    <p>Nous vous recontacterons bientôt</p>
-    <a href="https://jwulfran.github.io/Portofolio/index.html">Retour</a>
+    <div class="container">
+        <div class="content-grid">
+
+
+            <main class="article">
+            
+            
+                <article>
+                    <div class="section-header">
+                        <h1 class="article__title">Prédiction du prix des maisons</h1>
+                        <p class="article__meta">Publié le 11 août 2025</p>
+                    </div>
+                    <img src="../img/Housing_Prediction_img_presentation.png" width="900" height="500" loading="lazy" alt=""
+                        class="article__img">
+            
+                    <div class="content">
+                        <h2>Contexte du projet</h2>
+                        <p>
+                            Ce projet vise à estimer le <strong>prix de vente de logements</strong> à partir de caractéristiques
+                            structurées (surface, nombre de pièces, quartier, ancienneté, etc.). L’objectif est de fournir un
+                            <strong>modèle de régression</strong> robuste qui aide à l’<em>évaluation immobilière</em>, au
+                            <em>pilotage commercial</em> ou à la <em>priorisation d’investissements</em>.
+                        </p>
+            
+                        <h2>Objectifs</h2>
+                        <ul>
+                            <li>Nettoyer, explorer et enrichir un jeu de données immobilières.</li>
+                            <li>Comparer plusieurs algorithmes de régression et sélectionner le plus performant.</li>
+                            <li>Mesurer la performance avec <strong>RMSE</strong>, <strong>MAE</strong> et <strong>R²</strong>.</li>
+                            <li>Expliquer les facteurs clés qui influencent le prix estimé.</li>
+                        </ul>
+
+                        <h3>Données & variables clés</h3>
+                        <p>
+                            Les variables incluent notamment : <em>surface habitable</em>, <em>nombre de chambres/pièces</em>,
+                            <em>année de construction</em>, <em>état général</em>, <em>qualité</em>, et des indicateurs de
+                            <em>localisation</em> (quartier/zone). La cible est le <strong>prix de vente</strong> (valeur continue).
+                        </p>
+            
+                        <h2>Méthodologie</h2>
+                        <p>Le flux de travail suit les étapes suivantes :</p>
+                        <ul>
+                            <li><strong>EDA</strong> : statistiques descriptives, détection d’outliers, distributions, corrélations.</li>
+                            <li><strong>Préparation</strong> : gestion des valeurs manquantes, encodage des catégorielles, traitements
+                                des valeurs extrêmes, features dérivées (ex. âge du logement = année courante − année de construction).</li>
+                            <li><strong>Split</strong> : séparation <code>train/test</code> pour une évaluation honnête des performances.</li>
+                            <li><strong>Modélisation</strong> : comparaison de plusieurs algorithmes et <em>GridSearchCV</em> pour
+                                l’optimisation.</li>
+                            <li><strong>Évaluation</strong> : RMSE, MAE, R², et validation croisée.</li>
+                        </ul>
+            
+                        <h3>Modèles testés</h3>
+                        <ul>
+                            <li><strong>Régression linéaire (baseline)</strong>, <strong>Ridge</strong> / <strong>Lasso</strong> (régularisation)</li>
+                            <li><strong>Arbre de décision</strong> (CART)</li>
+                            <li><strong>Random Forest Regressor</strong></li>
+                        </ul>
+                        
+                        <h2>Limites & pistes d’amélioration</h2>
+                        <ul>
+                            <li>Tester des modèles de gradient boosting (XGBoost, LightGBM) et l’<em>early stopping</em>.</li>
+                            <li>Affiner les variables de localisation (embeddings de quartiers, distances à des points d’intérêt).</li>
+                            <li>Calibration des prédictions et <em>prediction intervals</em> pour quantifier l’incertitude.</li>
+                            <li>Interprétabilité avancée (SHAP) pour détailler l’impact local des features.</li>
+                        </ul>
+                        
+                        <h2>Technologies utilisées</h2>
+                        <ul>
+                            <li><strong>Python</strong> : Pandas, NumPy</li>
+                            <li><strong>Scikit‑learn</strong> : modèles, pipeline, validation croisée, GridSearchCV</li>
+                            <li><strong>Visualisation</strong> : Matplotlib, Seaborn</li>
+                            <li><strong>Environnement</strong> : Jupyter Notebook</li>
+                        </ul>
+                        
+                        <h2>Conclusion</h2>
+                        <p>
+                            Le projet confirme l’intérêt des méthodes d’ensembles pour la <strong>prédiction de prix immobiliers</strong>.
+                            La Random Forest délivre une précision fiable tout en restant relativement simple à déployer. Des gains
+                            supplémentaires sont attendus via des modèles de boosting, un meilleur encodage de la localisation, et des
+                            approches d’interprétabilité fine.
+                        </p>
+                        
+                        <h3>📎 Ressources</h3>
+                        <ul>
+                            <li><a href="https://github.com/JWulfran/WorkFlexSurvey" target="_blank">Code source sur GitHub</a></li>
+                            <li><a href="../docs/Projet-Final-E2025-RH.pdf" target="_blank">Télécharger le rapport complet (PDF)</a>
+                            </li>
+                        </ul>
+            
+                    </div>
+                </article>
+
+            </main>
+
+
+            <aside class="sidebar">
+
+                <h2 class="h3">Articles récents</h2>
+                <ul>
+                    <li><a href="./article-5">Article 5</a></li>
+                    <li><a href="./article-4">Article 4</a></li>
+                    <li><a href="./article-3">Article 3</a></li>
+                    <li><a href="./article-2">Article 2</a></li>
+                </ul>
+                <h2 class="h3">Projets récents</h2>
+                <ul>
+                    <li><a href="./projet-5">Projet 5</a></li>
+                    <li><a href="./Calculatrice_DIY.html">Calculatrice DIY</a></li>
+                    <li><a href="./Clients_segmenatation.html">Marketing prédictif · Classification</a></li>
+                    <li><a href="./WorkFlexSurvey.html">Analyse RH · Machine Learning</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -79,7 +199,7 @@
                                 </svg>
                             </a>
                         </li>
-    
+
                     </ul>
                 </div>
                 <div class="grid__item">
@@ -88,6 +208,9 @@
             </div>
         </div>
     </footer>
-    
+
+
+
 </body>
+
 </html>
