@@ -464,11 +464,6 @@ section{
     padding: 1rem;
 }
 
-@media screen and (max-width:749px) {   /* Écran de téléphone */
-
-}
-
-
 @media screen and (min-width:750px) {   /* Écran d'ordinateur */
     .Skills__grid{
         display: flex;
@@ -594,6 +589,12 @@ section{
         font-size: 1.5rem;
         text-decoration: underline;
     }
+    .modal__content .container .grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1rem;
+        align-items: stretch;
+    }
 }
 
 @media screen and (min-width:750px) {   /* Écran d'ordinateur */
@@ -603,10 +604,6 @@ section{
     .Portofolio-filter .grid__item{
         max-width: 25%;
     }
-    .modal__content{
-        padding: 3rem;
-    }
-
     .modal .grid__item{
         max-width: 50%;
     }
