@@ -46,6 +46,12 @@ img{
     max-width: 100%;
     /*height: auto;*/
 }
+@media screen and (max-width:749px){
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 li{
     margin-bottom: 1rem;
@@ -286,7 +292,7 @@ section{
     }
     .hero__item.right{
         order: 1;
-        padding: 5rem;
+        padding: .5rem;
     }
 }
 
@@ -581,8 +587,15 @@ section{
     .Portofolio a {
         font-size: 5rem;
     }
-    
+    .Portofolio-filter{
+        margin-bottom: 2rem;
+    }  
+    .modal__content a {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
 }
+
 @media screen and (min-width:750px) {   /* Écran d'ordinateur */
     .Portofolio .grid__item{
         max-width: 33.33%;
@@ -648,6 +661,67 @@ section{
     /* Écran de téléphone */
     .Portofolio-filter a {
        font-size: 1.4rem;
+    }
+}
+
+/* === Portofolio : 2 colonnes égales + cards de même taille (mobile) === */
+@media (max-width: 749px) {
+
+    /* grille en 2 colonnes */
+    .Portofolio .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .Portofolio .grid__item {
+        padding: 0;
+        /* évite les décalages */
+        max-width: 100%;
+    }
+
+    /* la card occupe 100% de sa cellule */
+    .card {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        /* image + contenu */
+        overflow: hidden;
+    }
+
+    /* image : même ratio pour toutes les cards */
+    .card>img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        /* homogène */
+        object-fit: cover;
+        display: block;
+    }
+
+    /* contenu : pousse pour remplir, reste propre */
+    .card__inner {
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    /* évite que des titres longs cassent la hauteur */
+    .card__title {
+        margin: 0;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        /* max 2 lignes */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .category {
+        font-size: 1rem;
     }
 }
 
