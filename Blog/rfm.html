@@ -85,20 +85,29 @@
                         <!-- 1. Introduction -->
                         <h2 id="intro">1. Introduction</h2>
                         <p>
-                            Dans un environnement où les coûts d’acquisition progressent et la concurrence s’intensifie,
-                            la maximisation de la valeur du portefeuille client
-                            devient prioritaire. L’analyse <em>RFM</em> (<em>Recency, Frequency, Monetary</em>) s’est
-                            imposée comme un standard opérationnel pour
-                            identifier et prioriser les segments à forte valeur ajoutée : sa simplicité de calcul, son
-                            interprétabilité et son efficacité pratique expliquent sa
-                            large adoption (Wei, Lin, &amp; Wu, 2010).
+                            La capacité à comprendre et à segmenter les clients est devenue une compétence stratégique essentielle pour toute
+                            organisation opérant dans un marché concurrentiel. Dans un contexte où les coûts d’acquisition de nouveaux clients ne
+                            cessent d’augmenter, les entreprises cherchent à maximiser la valeur de leur portefeuille existant en identifiant les
+                            segments les plus rentables et en adaptant leurs stratégies marketing.
+                        </p>
+                        <p>L’analyse RFM (Recency, Frequency, Monetary) est un outil de segmentation éprouvé, largement utilisé pour classer les
+                            clients en fonction de leur comportement d’achat et prédire leur valeur future (Wei, Lin, & Wu, 2010). Sa popularité
+                            repose sur trois caractéristiques majeures :
+                            <ul>
+                                <li> Sa simplicité : facile à mettre en place et à interpréter, même pour les non-experts.</li>
+                                <li>Sa pertinence stratégique : fondée sur des variables directement liées à l’engagement client.</li>
+                                <li>Son adaptabilité sectorielle : utilisable dans le commerce de détail, l’e-commerce, la banque, les télécommunications,
+                                ou encore l’industrie du jeu vidéo (Ajmera et al., 2022).</li>
+                            </ul>
+                            
                         </p>
                         <p>
-                            L’objectif de cet article est triple : (1) exposer les bases et évolutions de la méthode
-                            RFM, (2) détailler les modalités d’implémentation — du
-                            RFM classique aux extensions récentes (clustering, modèles séquentiels), et (3) illustrer,
-                            via des cas d’usage, les bénéfices, limites et
-                            perspectives de cette approche.
+                            L’objectif de cet article est triple : 
+                            <ol> 
+                                <li>Exposer les bases et évolutions de la méthode RFM,</li>
+                                <li>Détailler les modalités d’implémentation — du RFM classique aux extensions récentes (clustering, modèles séquentiels),</li> 
+                                <li>Illustrer, via des cas d’usage, les bénéfices, limites et perspectives de cette approche.</li> 
+                            </ol>
                         </p>
 
                         <!-- 2. Cadre conceptuel et théorique -->
@@ -106,22 +115,49 @@
 
                         <h3>2.1. Définition</h3>
                         <p>
-                            Le modèle RFM repose sur trois indicateurs comportementaux : la <strong>récence</strong>
-                            (délai depuis la dernière transaction), la
-                            <strong>fréquence</strong> (nombre de transactions sur une période) et le
-                            <strong>montant</strong> (valeur monétaire cumulée).
-                            Après calcul, chaque dimension est scorée (souvent de 1 à 5) puis combinée pour produire des
-                            profils segmentables (Wei et al., 2010).
+                            Le modèle RFM repose sur trois dimensions fondamentales (Wei et al., 2010) :
+                            <ul>
+                                <li>
+                                    Recency (Récence) : délai depuis la dernière interaction ou transaction. Plus la récence est faible, plus le client
+                                    est considéré comme actif.
+                                </li>
+                                <li>
+                                    Frequency (Fréquence) : nombre total de transactions ou interactions sur une période donnée. Une fréquence élevée est
+                                    souvent corrélée à une plus grande fidélité.
+                                </li>
+                                <li>
+                                    Monetary (Montant) : valeur totale dépensée par le client. Cet indicateur reflète directement la contribution
+                                    économique du client à l’entreprise.
+                                </li>
+                            </ul>
+                                L’analyse consiste à attribuer un score à chaque dimension, généralement sur une échelle de 1 à 5, puis à combiner ces
+                                scores pour former un profil client (par exemple, un score R=5, F=4, M=5 désigne un client très actif, fréquent et à
+                                forte dépense).
+                            
                         </p>
 
                         <h3>2.2. Origines et évolutions</h3>
                         <p>
-                            Historiquement lié au marketing direct, le RFM est aujourd’hui adapté aux contextes digitaux
-                            : e‑commerce, retail, services, jeux vidéo,
-                            et B2B. Les travaux récents mettent en avant des extensions : enrichissement de variables
-                            (comportementales), couplage à des algorithmes
-                            de clustering, et intégration de la dimension temporelle via des approches séquentielles
-                            (Wilbert et al., 2023; Zheng et al., 2024).
+                            L’utilisation du RFM remonte au marketing direct des années 1990, où il servait à optimiser les campagnes postales et
+                            téléphoniques (Hughes, 2005). Depuis, il a été adapté au marketing digital et enrichi par des approches de data mining
+                            et de machine learning (Syahfitri & Heikal, 2024).
+                            Les évolutions récentes incluent :
+                            <ul>
+                                <li>
+                                    RFM enrichi : intégration de variables comportementales (intensité d’usage, probabilité de churn) pour affiner la
+                                    segmentation (Ajmera et al., 2022).
+                                </li>
+                                <li>
+                                    Couplage avec des algorithmes de clustering (K-means, GMM) pour créer des segments plus homogènes et actionnables
+                                    (Wilbert et al., 2023).
+                                </li>
+                                <li>
+                                    Modèles séquentiels (SeqRFM) qui prennent en compte l’ordre chronologique des interactions pour améliorer la
+                                    prédiction (Zheng et al., 2024).
+                                </li>
+                            </ul>
+                            Ces avancées visent à répondre aux défis de l’omnicanal et de la personnalisation, en permettant une analyse plus fine et
+                            dynamique du comportement client.
                         </p>
 
                         <!-- 3. Méthodologies d’application -->
@@ -129,20 +165,35 @@
 
                         <h3>3.1. RFM classique (par quantiles)</h3>
                         <p>
-                            <strong>Pipeline type.</strong> (i) Extraction de l’historique des transactions (ID client,
+                            L’application standard du RFM suit généralement quatre étapes :
+                            <ol>
+                                <li>Collecte des données : extraire l’historique des transactions, incluant date, montant et identifiant client.</li>
+                                <li>Calcul des indicateurs :
+                                    <ul>
+                                        <li>Récence = date actuelle − date de dernière transaction</li>
+                                        <li>Fréquence = nombre total de transactions sur la période</li>
+                                        <li>Montant = somme des achats sur la période</li>
+                                    </ul>
+                                </li>
+                                <li>Attribution de scores : découper chaque indicateur en quantiles (ex. quintiles) et attribuer un score.</li>
+                                <li>Segmentation : combiner les scores pour créer des groupes stratégiques (VIP, clients dormants, à réactiver, etc.).
+                                Cette méthode est rapide, peu coûteuse et efficace pour les bases de données de petite à moyenne taille.</li>
+                            </ol>
+                            <strong>Pipeline type.</strong> 
+                            <p>(i) Extraction de l’historique des transactions (ID client,
                             date, montant) · (ii) Calcul R, F, M · (iii) Discrétisation par
                             quantiles (ex. quintiles) · (iv) Combinaison des scores (ex. 5‑4‑5) · (v) Ciblage des
                             segments (VIP, dormants, etc.). Cette approche
                             est rapide à déployer, peu coûteuse et efficace sur des bases petites à moyennes. Elle
                             constitue un socle robuste pour les
-                            entreprises débutant en CRM analytique.
+                            entreprises débutant en CRM analytique.</p>
                         </p>
 
                         <h3>3.2. RFM enrichi (features additionnelles)</h3>
                         <p>
-                            Dans des environnements numériques, enrichir RFM par des variables comme
-                            l’<em>intensité</em> d’usage (durée moyenne de session), la
-                            <em>Customer Lifetime Value</em> (CLV) ou la probabilité de churn améliore le pouvoir
+                            Dans des environnements numériques, enrichir l'analyse RFM par des variables comme
+                            l’<em>intensité</em> d’usage, temps moyen passé par session (Ajmera et al., 2022), la
+                            <em>Customer Lifetime Value</em> (CLV) pour intégrer une dimension prospective. ou la probabilité de churn, pour améliorer le pouvoir
                             prédictif et la pertinence opérationnelle
                             (Ajmera, Bonar, Scott, Miu, &amp; Manuel, 2022).
                         </p>
