@@ -54,3 +54,39 @@
         padding: 5rem 2rem 0 0;
     }
 }
+
+.sidebar {
+    position: fixed;
+    /* fixé à l’écran */
+    top: 80px;
+    /* espace pour ne pas recouvrir le header */
+    right: 0;
+    /* collé à droite */
+    width: 250px;
+    /* largeur fixe */
+    height: calc(100% - 80px);
+    /* occupe toute la hauteur restante */
+    overflow-y: auto;
+    /* scroll interne si contenu trop grand */
+    background: #f9f9f9;
+    /* couleur de fond (tu peux ajuster) */
+    border-left: 1px solid #ddd;
+    padding: 1rem;
+    z-index: 10;
+    /* au-dessus du contenu principal */
+}
+
+@media screen and (min-width:750px) {   /* Écran d'ordinateur */
+    .content-grid {
+            margin-right: 50px;
+            /* laisse la place pour la sidebar */
+        }
+}/* Pour que le contenu principal n'aille pas sous le aside */
+
+@media screen and (max-width:749px) {   /* Écran de téléphone */
+    .sidebar{
+        position: inherit;
+        background: #fff;
+        border: 0px ;
+    }
+}

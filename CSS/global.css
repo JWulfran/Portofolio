@@ -482,6 +482,10 @@ section{
     }
 }
 
+.Portofolio .section-title a{
+    color: #000;
+}
+
 .Portofolio {
     background: #f5f5f5;
     display: flex;
