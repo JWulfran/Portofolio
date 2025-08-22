@@ -58,22 +58,21 @@
 .sidebar {
     position: fixed;
     /* fixé à l’écran */
-    top: 80px;
+    top: 90px;
     /* espace pour ne pas recouvrir le header */
     right: 0;
     /* collé à droite */
     width: 250px;
     /* largeur fixe */
-    height: calc(100% - 80px);
+    height: 60%;
     /* occupe toute la hauteur restante */
     overflow-y: auto;
     /* scroll interne si contenu trop grand */
-    background: #f9f9f9;
-    /* couleur de fond (tu peux ajuster) */
-    border-left: 1px solid #ddd;
-    padding: 1rem;
-    z-index: 10;
+    background: #fff;
+    margin:  1rem 20rem 1rem 0.5rem;
+    z-index: 1;
     /* au-dessus du contenu principal */
+    
 }
 
 @media screen and (min-width:750px) {   /* Écran d'ordinateur */
